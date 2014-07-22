@@ -20,6 +20,7 @@
 							msg+='<p>'+resp.FieldErrors[i].ID+'-'+resp.FieldErrors[i].ErrorText+'</p>';
 							}
 							jQuery('#error-holder').html(msg);
+							jQuery('#error-holder').addClass('showError');
 							
 						}
 						console.log(data);

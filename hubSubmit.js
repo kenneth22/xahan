@@ -4,7 +4,7 @@
 			var redirect = jQuery('#'+formID+" input[name='redirect_url']").val();
 			jQuery.ajax({
 					type:"POST",
-					url:"http://travelcampstore.com/breezehub/submit.php",
+					url:"http://travelcampstore.com/breezehub/submit.php", // site url and breezehub folder location
 					data:jQuery('#'+formID).serialize(),
 					success:function(data){
 						var resp = JSON.parse(data);
@@ -15,7 +15,7 @@
 						}
 						else
 						{
-	
+							
 							for(var i=0;i<resp.FieldErrors.length; i++){
 							msg+='<p>'+resp.FieldErrors[i].ID+'-'+resp.FieldErrors[i].ErrorText+'</p>';
 							}
